@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+     body {
+        /* font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+        /* height: 100vh; */
+        /* background-color: #f0f0f0; */
+    }
+
+    .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 2000px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%; /*Ajustar para que quepan todas las imágenes (6 / 4 = 1.5)*/
+        /* width: calc(100% * 3); */
+    }
+
+    .carousel-item {
+        flex: 1 0 25%; /* Ajustar para mostrar 4 imágenes a la vez (1/4 = 25%) */
+        box-sizing: border-box;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        height: 350px; /* Ajusta la altura según tus necesidades */
+    }
+
+    .carousel-control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+    @media (max-width: 768px) {
+        .carousel-item img {            
+            height: 150px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="http://54.157.126.125/wp-content/uploads/2024/07/9f93998a-4137-49b5-aa95-db64cd619535.jpeg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="http://54.157.126.125/wp-content/uploads/2024/07/0c1ffb56-79e2-4722-9a7d-e82d62612c69.jpeg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="http://54.157.126.125/wp-content/uploads/2024/07/ab493688-0054-4a96-b47c-5fb4f79b4c69.jpeg" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="http://54.157.126.125/wp-content/uploads/2024/07/8370542c-a02b-49a5-8e53-0f1285dc4422-1.jpeg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="http://54.157.126.125/wp-content/uploads/2024/07/56d3214e-5399-4e49-b4f4-9d2425de2707-1.jpeg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="http://54.157.126.125/wp-content/uploads/2024/07/7982b32e-3e20-4438-86f7-9b7c83e5aa63-1.jpeg" alt="Image 3">
+            </div>
+            <!-- <div class="carousel-item">
+                <img src="http://54.157.126.125/wp-content/uploads/2024/07/7982b32e-3e20-4438-86f7-9b7c83e5aa63-1.jpeg" alt="Image 3">
+            </div> -->
+            <!-- <div class="carousel-item">
+                <img src="http://54.157.126.125/wp-content/uploads/2024/07/7982b32e-3e20-4438-86f7-9b7c83e5aa63-1.jpeg" alt="Image 3">
+            </div> -->
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const itemsVisible = 4; // Número de elementos visibles a la vez
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            const totalSlides = slides.length;
+            
+            // Permitir desplazamiento continuo
+            if (index >= totalSlides / 2) {
+                currentIndex = 0;
+                document.querySelector('.carousel-inner').style.transition = 'none';
+                document.querySelector('.carousel-inner').style.transform = 'translateX(0%)';
+                setTimeout(() => {
+                    document.querySelector('.carousel-inner').style.transition = 'transform 0.5s ease';
+                    currentIndex = 1;
+                    const offset = -currentIndex * (100 / itemsVisible);
+                    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+                }, 50);
+                return;
+            } else if (index < 0) {
+                currentIndex = totalSlides / 2 - itemsVisible;
+                document.querySelector('.carousel-inner').style.transition = 'none';
+                const offset = -currentIndex * (100 / itemsVisible);
+                document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+                setTimeout(() => {
+                    document.querySelector('.carousel-inner').style.transition = 'transform 0.5s ease';
+                    currentIndex = currentIndex - 1;
+                    const newOffset = -currentIndex * (100 / itemsVisible);
+                    document.querySelector('.carousel-inner').style.transform = `translateX(${newOffset}%)`;
+                }, 50);
+                return;
+            } else {
+                currentIndex = index;
+            }
+
+            const offset = -currentIndex * (100 / itemsVisible);
+            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Auto slide every 3 seconds
+        setInterval(nextSlide, 3000);
+
+       
+
+    </script>
+</body>
+</html>

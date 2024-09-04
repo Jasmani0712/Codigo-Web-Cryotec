@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYOTEC SRL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            /* font-family: 'Roboto', sans-serif; */
+           
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* header {
+            background-color: #0066cc;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        } */
+
+        li {
+            /*font-size: 18px;  Cambia este valor según tus necesidades */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .container {
+            padding-top: 100px;
+            padding-left: 200px;
+            padding-right: 200px;
+            padding-bottom: 100px;
+            /* max-width: 1200px; */
+            margin: 0 auto;
+
+            /* margin: 0;
+            padding: 0; */
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        .section {
+            margin-top: 0px;
+            margin-bottom: 40px;
+            background: white;
+            padding: 20px;
+            padding-top: 70px !important;
+            padding-bottom: 50px !important;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #0B4D4A;
+            border-bottom: 2px solid #0B4D4A;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .section p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+            text-align: justify;
+
+        }
+        .accordion {
+            background-color: #e6e6e6;
+            color: black;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            transition: background-color 0.4s ease;
+            margin-top: 20px;
+        }
+        .accordion:hover, .accordion.active {
+            background-color: #cacaca;
+            color: #0B4D4A;
+        }
+        .panel {
+            padding: 0 15px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-top: none;
+            margin-bottom: 20px;
+            border-radius: 0 0 8px 8px;
+        }
+        .footer {
+            background-color: #0B4D4A;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .vision, .mision {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .vision div, .mision div {
+            flex: 1;
+            min-width: 300px;
+            /* background: #f5f5f5; */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .vision h3, .mision h3 {
+            color: #0B4D4A;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 50px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 1s ease-out;
+        }
+        .section h2 {
+            color: #0B4D4A;
+            border-bottom: 3px solid #0B4D4A;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        .section p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+        .subsection {
+            margin-bottom: 30px;
+        }
+        .subsection h3 {
+            color: #0B4D4A;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .subsection p {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .subsection ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .subsection ul li {
+            margin-bottom: 10px;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta a {
+            display: inline-block;
+            background-color: #0B4D4A;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        .cta a:hover {
+            background-color: #0B4D4A;
+        }
+
+
+        .contenedor2 {
+            display: flex;
+            /* align-items: flex-start; Alinear elementos al inicio */
+            margin-top: 10px;
+            /* justify-content: center; Centra horizontalmente */
+            align-items: center;
+            /* height: 100vh; Ajusta según necesites */
+            justify-content: center; /* Alinea el contenido al lado derecho */
+        }
+       
+        .textos {
+            /* margin-right: 45px;  */
+            /* margin-left: 45px;  */
+            text-align: center;
+            margin-right: -90px;
+            margin-left: -90px;
+
+        }
+        .textos2 {
+            margin-right: 35px; 
+            margin-left: 5px; 
+            text-align: center;
+        }
+        .textos3 {
+            margin-right: 65px; 
+            margin-left: 5px; 
+            text-align: center;
+
+        }
+        .textos4 {
+            /* margin-right: 45px;  */
+            /* margin-left: 45px;  */
+            text-align: center;
+            margin-right: 50px;
+            margin-left: 50px;
+        }        
+        .textos5 {
+            /* margin-right: 45px; */
+            /* margin-left: 45px; */
+            text-align: center;
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+
+        .textosnivel2 {
+            /* margin-right: 45px;  */
+            /* margin-left: 45px;  */
+            text-align: center;
+            margin-right: -120px;
+            margin-left: -120px;
+
+        }
+        .textosnivel0 {
+            /* margin-right: 45px;  */
+            /* margin-left: 45px;  */
+            text-align: center;
+            margin-right: -70px;
+            margin-left: -70px;
+
+        }
+
+        .textosnivel3 {
+            /* margin-right: 45px; */
+            /* margin-left: 45px; */
+            text-align: center;
+            margin-right: 20px;
+            margin-left: -80px;
+        }
+        .textosnivel4 {
+            /* margin-right: 45px; */
+            /* margin-left: 45px; */
+            text-align: center;
+            margin-right: -60px;
+            margin-left: -40px;
+        }
+        .textosnivel5 {
+            /* margin-right: 45px; */
+            /* margin-left: 45px; */
+            text-align: center;
+            margin-right: -50px;
+            margin-left: -40px;
+        }
+       
+        .elementor img {
+            max-width: 600px !important;
+        }
+        .imagenmini{
+            /* max-width: 550px;
+            margin-top: 10px; */
+            max-width: 250px !important;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .imagen{
+            /* max-width: 550px;
+            margin-top: 10px; */
+            max-width: 350px !important;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .imagen2{
+            /* max-width: 550px;
+            margin-top: 10px; */
+            max-width: 350px !important;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .imagen3{
+            /* max-width: 550px;
+            margin-top: 10px; */
+            max-width: 650px !important;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .imagenHorizontal{
+            /* max-width: 550px;
+            margin-top: 10px; */
+            max-width: 550px;
+            max-height: 300px;
+            margin-top: 10px;
+            border-radius: 10px;
+            object-fit: cover; /* Hace que la imagen se ajuste a los límites, cortándola si es necesario */
+            object-position: center; /* Centra la imagen en el contenedor */
+        }
+         /* Estilo de la flecha */
+         #backToTop {
+            display: none; /* Oculta la flecha por defecto */
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .botonContacto {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #0B4D4A;
+            border: none;
+            border-radius: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+        }
+        .miniIcono {
+            width: 30px; /* Ajusta el tamaño de la imagen según lo necesites */
+            height: auto;
+            margin-left: 10px; /* Espacio entre el texto y la imagen */
+            margin-bottom: 0px;
+            vertical-align: middle;            
+        }
+        .section p{
+                font-size: 1.2em;
+
+            }
+        @media (max-width: 1168px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size:1em;
+            }
+            .section p{
+                font-size: 0.9em;
+                padding: 5px;
+
+            }
+            .contenedor2{
+                display: block;
+                text-align: center;   
+            }
+            .textos2{
+                margin-right: 5px; 
+                margin-left: 5px; 
+                /* text-align: justify; */
+                text-align: center;
+            }
+            .textos3{
+                margin-right: 5px; 
+                margin-left: 5px; 
+                /* text-align: justify; */
+                text-align: center;
+            }
+            .textos{
+                margin-right: 5px; 
+                margin-left: 5px; 
+                /* text-align: justify; */
+                text-align: center;
+            }
+            .textos5 {
+                /* margin-right: 45px; */
+                /* margin-left: 45px; */
+                text-align: center;
+                margin-right: 0px;
+                margin-left: 20px;
+            }
+            
+            .container {
+            padding-top: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;     
+            }
+            .contenedor2 img {
+                max-width: 250px !important;                   
+            }
+            .section{
+                margin-bottom: 30px;
+
+                padding: 0px;
+            }
+        }
+        @media (max-width: 668px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size:1em;
+            }
+            .section p{
+                font-size: 0.9em;
+                padding: 5px;
+
+            }
+            .contenedor2{
+                display: block;
+                text-align: center;   
+            }
+            .textos2{
+                margin-right: 5px; 
+                margin-left: 5px; 
+                /* text-align: justify; */
+                text-align: center;
+            }
+            .textos3{
+                margin-right: 5px; 
+                margin-left: 5px; 
+                /* text-align: justify; */
+                text-align: center;
+            }
+           
+            .textos {
+                margin-right: 0;
+                margin-left: 0px;
+                text-align: center;
+                margin-right: -50px; 
+                /* borde y espacio blanco */
+                margin-left: -50px;
+            }
+            .container {
+                padding-left: 0px !important;
+                padding-right: 20px !important;
+            }
+            .contenedor2 img {
+                max-width: 250px !important;                   
+            }
+            .section{
+                margin-bottom: 30px;
+                padding: 5px !important;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <h1>CRYOTEC SRL</h1>
+        <p>Comprometidos con la excelencia</p>
+    </header> -->
+    <div class="container">
+        <!-- <div class="section">
+            <h2>Sobre Nosotros</h2>
+            <p>CRYOTEC SRL es una empresa comprometida con la excelencia. Nuestra empresa fue creada en el año 2003, fruto de un análisis de nuestro campo de acción como profesionales, la coyuntura nacional e internacional, los retos, las problemáticas; nos compromete en asignar nuestras competencias profesionales en diferentes áreas de los servicios para atender sus necesidades.</p>
+            <p>Somos una empresa con visión moderna de los negocios, nos encontramos en la búsqueda permanente de socios estratégicos que nos permitan tender nuevos puentes de alianza estratégicos, visión de negocios internacionales, que agilizan las soluciones a cada uno de los problemas de nuestros clientes.</p>
+            <button class="accordion">Detalles Adicionales</button>
+            <div class="panel">
+                <p>CRYOTEC SRL se ganó la confianza de nuestros clientes, habiendo concluido satisfactoriamente todos y cada uno de los contratos, de igual forma la satisfacción en nuestras relaciones comerciales.</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Nuestras Áreas</h2>
+            <p>CRYOTEC SRL desde sus inicios, aborda las áreas de ingeniería, energía – petróleo, arquitectura, economía, medio ambiente, seguridad industrial, higiene y salud ocupacional con responsabilidad social y sistemas.</p>
+        </div> -->
+   
+
+        
+        <div id="nosotros" class="contenedor2">
+            <div class="textos5">                     
+                <div class="section mision">
+                    <div>
+                        <h2>Sobre Nosotros</h2>
+                        <p> <!--CRYOTEC SRL es una empresa comprometida con la excelencia. Nuestra empresa fue creada en el año 2003, -->
+                            Fruto de un análisis profesional de nuestro campo de acción en la coyuntura nacional e internacional.
+                            <!--los retos, las problemáticas; nos compromete en asignar nuestras competencias profesionales en diferentes áreas de los servicios para atender sus necesidades.-->
+                        </p>
+                        <!-- <button class="accordion">Detalles Adicionales</button> -->
+                        <!-- <div class="panel"> -->
+                            <p>Somos una empresa con visión moderna de los negocios, nos encontramos en la búsqueda permanente de socios estratégicos que nos permitan tender nuevos puentes de alianza estratégicos, visión de negocios internacionales, que agilizan las soluciones a cada uno de los problemas de nuestros clientes.</p>
+
+                            <p>CRYOTEC SRL se ganó la confianza de nuestros clientes, habiendo concluido satisfactoriamente todos y cada uno de los contratos, de igual forma la satisfacción en nuestras relaciones comerciales.</p>
+                        <!-- </div> -->
+                    </div>
+                </div>   
+            </div>
+            <!-- <div class="textos">                      -->
+                <div class="section mision">
+                    <div>
+                        
+                        
+                        
+                        
+                        
+                        <h2>Nuestras Áreas</h2>
+                        <br>
+                        <br>
+                        <p>CRYOTEC SRL desde sus inicios, aborda las áreas de ingeniería, energía – petróleo, arquitectura, economía, medio ambiente, seguridad industrial, higiene y salud ocupacional con responsabilidad social y sistemas.</p>
+                        <br>
+                        <br>
+                    
+                        
+                    </div>
+                </div>   
+            <!-- </div> -->
+        </div>
+
+        
+        <div class="section">
+            <!-- <h2>Colaboraciones y Proyectos</h2> -->
+            <h2>Hitos</h2>
+
+            <p>A principios del año 2006, CRYOTEC SRL firmó un compromiso con la Compañía Linde AG de Alemania para el desarrollo de proyectos en Bolivia y en el exterior, relacionados con el Gas Natural y el Petróleo.</p>
+            <p>El 2012 CRYOTEC SRL encara la <b> Supervisión del diseño, construcción, puesta en marcha y seguimiento en la operación  </b> del sistema de TELEFERICO entre las ciudades de La Paz y El Alto - Bolivia, sistema de teleféricos más grande del mundo.</p>
+            <p>El 2020 CRYOTEC SRL en la pandemia COVID-19 encara La construcción del horno crematorio móvil  diseño qué consiguió una repercusión y reconocimiento mundial por la innovación y ayuda en la crisis.</p>
+            
+            <button class="accordion">Nuevos desarrollos</button>
+            <div class="panel">
+                <ul>
+                    <li><p><b>Alimentación:</b> creación del primer Centro de Control Metabólico SCINUTRITION, especializado en nutrición FITNESS – DIETAS – NORMAL, con productos cocinados y envasados con tecnología ATM (Atmosfera Modificada).</p></li>
+                    <li><p><b>Bio remediación:</b> uso de organismos vivos (microorganismos, hongos y plantas) para restaurar ambientes alterados por contaminantes a su condición natural.</p>                     
+                    </li>
+                    <li><p><b>Producción de incineradores y hornos crematorios: </b> incineradores con temperatura de trabajo de 800 a 1,000 grados centígrados y regulación de la inyección de aire, eficientes y ambientalmente amigables.</p>
+                        <button class="accordion">Más Información Técnica</button>
+                        <div class="panel">
+                            <p>El incinerador, con un nivel de temperatura de trabajo de 800 a 1,000 grados centígrados y la regulación de la inyección de aire, responde a la combustión con eficiencia. La materia queda expuesta a la temperatura que induce a su propia combustión (autoinducción). Con la inyección de aire en el hogar, se consigue que opere con la combustión de la materia, sin requerir la activación de la llama del quemador, haciendo el proceso más eficiente y de menor consumo de combustible. El incinerador es una estructura fija, abierta y modular, provisto de dos cámaras, el hogar de combustión y la requema de gases, lo que lo hace ambientalmente amigable.</p>
+                        </div>
+                    </li>
+                    
+                    <li><p><b>Electromovilidad:</b>  la experiencia como empresa supervisora del diseño, construcción y puesta en marcha del teleférico más grande del mundo, Teleférico de La Paz y El Alto, sumada a la experiencia en nuestra División energía, abre la posibilidad de encarar y proponer nuevos proyectos del contexto de movilidad urbana.</p>
+                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Quienes Somos</h2>
+            <p>CRYOTEC SRL es una empresa que está al servicio nacional e internacional, por iniciativa de un grupo de profesionales con experiencia reconocida en el desarrollo de sus funciones.</p>
+        </div>
+
+
+        <div class="contenedor2">
+            <div class="textos5">                     
+                <div class="section mision">
+                    <div>
+                        <h2>Nuestra Misión</h2>
+                        <p>CRYOTEC SRL pretende ser el principal proveedor de servicios y comercializador de productos de primera calidad, brindando operaciones con estándares internacionales.</p>
+                   
+                    </div>
+                </div>   
+            </div>
+            <div class="textos5">                     
+                <div class="section mision">
+                    <div>
+                        <br>
+                        <h2>Nuestra Visión</h2>
+                        <p>Ser la primera opción de los productos y servicios que ofertamos.</p>     
+                        <br>
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+        
+       
+        <!-- División Alimentos -->
+        <div id="alimentos" class="section">
+            <h2>División Alimentos</h2>
+            <div class="contenedor2">
+                <div class="textos">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/scinutrition.jpg" alt="" class="imagen">         
+
+                </div>
+           
+            </div> 
+            <p style="text-align:center;"><b> <i> "Raciones alimenticias nutricionalmente estudiadas" </i></b></p>
+            <p>Más de dieciocho años de actividad del restaurante Rincón Colonial en la ciudad de La Paz, hoy conjugando esta experiencia con tecnología y conocimiento científico, permite entregar raciones alimenticias estudiadas, respaldan un novedoso servicio, con un sistema de delivery - diario y de delivery - amplia duración (envasado en atmósfera modificada – ATM).</p>
+            <h3>Ventajas</h3>
+            <ul>
+                <li><p>Ofrecemos un servicio de control nutricional muy competitivo, brindando un catálogo nutricional (menú selecto) con estudio nutritivo, seguridad e higiene alimenticia. <!-- proceso de cocido sin aceite y rapidez en la entrega en la ciudad de La Paz.--></p></li>
+                <li><p><b>NUTRICION FITNESS:</b> el cliente puede armar su ración alimenticia en función a su requerimiento nutricional (hipocalórica, normo calórica, hipercalórico y epigenética), con la ayuda de nuestra CALCULADORA NUTRICIONAL usted puede conocer científicamente que consumir, a partir de la selección de los distintos alimentos que le ofrecemos, definiendo su peso obtiene la estimación de calorías totales, el peso del producto y el porcentaje de participación de proteína, carbohidratos, fibra y grasa.</p></li>
+                <li><p><b>NUTRICION DIETA:</b> el cliente con su receta médica, selecciona la DIETA requerida: normo calórica, hipograsa, hiposódica, hipoglusida, hiperproteica, hipoproteica, luiquida clara, liquida completa, blanda, blanda mecánica, astringente, suproglotida, menú rápido y refrigerio reforzado, disfrutando una variedad de platos presentados en el catálogo nutricional ¡que le harán sentir que no está en dieta!</p></li>
+                <li><p><b>NUTRICIÓN NORMAL:</b> en el catálogo nutricional, encuentra la clasificación de platos en base a carne de res, carne de pollo y carne de pescado, todos los alimentos son preparados sin el uso de aceite, explotando los beneficios de las especias, protegiendo los nutrientes.</p></li>
+            </ul>
+            <div class="cta">
+                <a href="https://scinutrition.cryotecsrl.com">Visita y regístrate en <b> SCINUTRITION</b></a>
+            </div>
+        </div>
+        <!-- <div class="section"> -->
+            <!-- <div class="subsection">
+                
+            </div>
+            <div class="cta">
+                <a href="https://scinutrition.cryotecsrl.com">Elija su menú para hoy!</a>
+            </div> -->
+        <!-- </div> -->
+
+        <!-- División Bioremediación -->
+        <div id="bioremediacion" class="section">
+            <h2>División Bioremediación</h2>
+            <p style="text-align:center;"><b> <i> "Heredar pasivos ambientales es lo más peligroso" </i></b></p>
+            <p>CRYOTEC SRL cuenta con soluciones de remediación de pasivos ambientales para el sector petrolero, minero e industrial, se ahorra al utilizar técnicas probadas como la atenuación natural y/o la bioremediación con gran efectividad en el tratamiento de suelos y aguas contaminadas, es una solución económica, que aprovecha las condiciones naturales de autodepuración, con la optimización de un proceso biológico, uso de microorganismos (bacterias, hongos, levaduras y algas) o enzimas para producir una biotransformación (bioventilación, biopilas, biolabranza o landfarming, entre otros) con la estimulación de los procesos degradativos. 
+                <br>
+                Al Potenciar la eficiencia y efectividad de los procesos de biorremediación con la bio estimulación incrementando el potencial de degradación de las comunidades microbianas naturales y bio aumentación con la inoculación de cepa bacteriana o consorcio bacteriano, se incrementa la capacidad de bio remediación con buen potencial de degradación, sin modificar la diversidad genética y generando condiciones para la adición de nutrientes regulación de condiciones redox, cambio de pH, u otras en las que se puede influir.
+            </p>
+            <h3>Consideraciones</h3>
+            <ul>
+                <li><p>Posibilidad de aplicarse in situ o ex – situ.</p></li>
+                <li><p>Costo económico de operación.</p></li>
+                <li><p>Se obtiene un subproducto útil para la agricultura con nutrientes.</p></li>
+                <li><p>Tiempo de proceso largo.</p></li>
+                <li><p>Contaminantes tóxicos para los microorganismos.</p></li>
+            </ul>
+            <h3>Servicios</h3>
+                <ul>
+                    <li><p>Estructuración de la metodología de remediación.</p></li>
+                    <li><p>Elaboración de planes de acciones / manutención de áreas de remediación.</p></li>
+                    <li><p>Definición la tecnología de remediación o de conclusión por la finalización y/o cierre de estas.</p></li>
+                    <li><p>Reconocimiento de áreas contaminadas.</p></li>
+                    <li><p>Ingeniería de depósitos de almacenamiento de contaminante (fosas o piscinas de pasivos).</p></li>
+                    <!-- <button class="accordion">Ver más servicios</button>
+                    <div class="panel"> -->
+                        <li><p>Caracterización físico-química–microbiológica.</p></li>
+                        <li><p>Interpretación de los resultados de calidad del contaminante.</p></li>
+                        <li><p>Selección de áreas potenciales a operar en la aplicación en banco y/o campo de la tecnología de biorremediación.</p></li>
+                        <li><p>Elaboración y diseño de áreas a explotar.</p></li>
+                        <li><p>Conformación de áreas y celdas de tratamiento.</p></li>
+                        <li><p>Toma de la cantidad de muestra de contaminante necesaria a utilizar en el proceso a escala de banco.</p></li>
+                        <li><p>Identificación de áreas para la conformación de celdas pequeñas en el tratamiento propuesto (bandejas, tanques, etc.).</p></li>
+                        <li><p>Caracterización de pasivos.</p></li>
+                        <li><p>Elaboración de diseño (relación contaminante-suelo capa vegetal y relación contaminante-agua).</p></li>
+                        <li><p>Elaboración de la información referida al montaje (definición de materiales y materias primas a utilizar, utensilios o set de agricultura).</p></li>
+                        <li><p>Seguimiento analítico del proceso.</p></li>
+                        <li><p>Análisis físico-químicos y microbiológicos (Métodos de ensayos avalados por normas internacionales y/o nacionales (ISO, APHA y EPA).</p></li>
+                        <li><p>Determinación de parámetros de grado de la contaminación.</p></li>
+                        <li><p>Asesoría en las operaciones del proceso, mezclado, homogenización y aireación del material contaminado.</p></li>
+                        <li><p>Manejo de suelos recuperados.</p></li>
+                        <li><p>Análisis de toxicidad aguda, mediante bio indicadores de la contaminación, de los suelos tratados y/o recuperados.</p></li>
+                        <li><p>Manejo de suelos recuperados.</p></li>
+                        <div class="contenedor2">
+                            <div class="textos">
+                                <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion1.png" alt="" class="imagen">                      -->
+                                <img src="http://cryotecsrl.com/wp-content/uploads/2024/08/4.png" alt="" class="imagen">         
+
+                            </div>
+                            <div class="textos">                     
+                                <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion2.png" alt="" class="imagen">          -->
+                                <img src="http://cryotecsrl.com/wp-content/uploads/2024/08/21.png" alt="" class="imagen">         
+
+
+                            </div>
+                        </div> 
+                        <li><p>Evaluación de resultados mediante la eficiencia de remoción obtenida por el proceso, para la viabilidad de la tecnología en la remediación del contaminante.</p></li>
+                        <li><p>Identificación de áreas para la conformación de celdas de tratamiento.</p></li>
+                        <li><p>Elaboración del diseño del tratamiento  por caracterización.</p></li>
+                        <li><p>Establecimiento de base de cálculo (relación contaminante-suelo capa vegetal).</p></li>
+                        <li><p>Elaboración de la información del proceso de bio remediación (materiales, materias primas, equipamiento mecánico pesado).</p></li>
+                        <li><p>Seguimiento analítico del proceso de bio remediación con ensayos avalados por normas internacionales (ISO, APHA, EPA).</p></li>
+                        <li><p>Asesoría de operación de procesos (extracción, mezclado, homogenización, aireación, humectación y fertilización.</p></li>
+                        <div class="contenedor2">
+                            <div class="textosnivel2">
+                                <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion3.png" alt="" class="imagen">          -->
+                                <img src="http://cryotecsrl.com/wp-content/uploads/2024/08/5.png" alt="" class="imagen">         
+
+                            </div>
+                            <div class="textosnivel2">                     
+                                <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion5.png" alt="" class="imagen">          -->
+                                <img src="http://cryotecsrl.com/wp-content/uploads/2024/08/20.png" alt="" class="imagen">         
+
+                            </div>               
+                        </div>
+                        <div class="contenedor2">
+                            <div class="textos2">                     
+                                <li><p>Análisis de toxicidad aguda, mediante bioindicadores de la contaminación, de los suelos tratados y/o recuperados.</p></li>
+                                <li><p>Evaluación de bio indicadores de la contaminación.</p></li>
+                                <li><p>Reutilización o extracción final de los suelos descontaminados.</p></li>
+                                                      </div>  
+                            <div class="textos2">                     
+                                <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/curvabioremediacion4.png" alt="" class="imagen">                    
+                            </div>                   
+                        </div>  
+                        <li><p>Identificación de posibles impactos ambientales producto de la actividad de remediación aplicada.</p> </li>
+                                <li><p>Elaboración de disposiciones técnicas.</p></li>
+                                <li><p>Elaboración de plan de acciones.</p></li>
+                       
+                        <div class="contenedor2">    
+                            <div class="textos2">                     
+                                
+                                <li><p>Servicio de Apoyo operación de bio remediación.</p></li>
+                                <li><p>Infraestructura analítica. Laboratorio (local).</p></li>         
+                            </div>                                                   
+                            <div class="textos2">                     
+                                <!--<img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion6.png" alt="" class="imagen">   -->
+                                <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/Sin-titulo-1-Recupessrado-1.png" alt="" style="width: 70%; height: auto;">
+                            </div>
+                            
+                        </div>  
+                    <!-- </div>                   -->
+                </ul>
+                <br>
+                <h3 style="text-align:center ;">SOLUCIÓN AL MANEJO DE RESIDUALES LÍQUIDOS</h3>
+                <p>
+                    CRYOTEC SRL elabora proyectos, expedientes técnicos, diseña y asesora las soluciones constructivas y de instalación de las soluciones de ingeniería sanitaria a la medida de la necesidad de los clientes, con quienes establecemos relaciones de asistencia y de capacitación durante y después de la puesta en marcha de la obra. Estas relaciones son nuestra fortaleza.
+                </p>  
+                <h3> Campo de aplicación</h3>
+                <ul>
+                    <li> <p>Captación y potabilización de aguas superficiales y subterráneas.</p></li>
+                    <li> <p>Redes de acueductos.</p></li>
+                    <li> <p>Alcantarillado.</p></li>
+                    <li> <p>Drenaje Pluvial Urbano. </p></li>
+                    <li> <p>Planta de tratamiento de aguas residuales urbanas e industriales.</p></li>
+                    <li> <p>Reuso de las aguas tratadas.</p></li>
+                    <li> <p>Estaciones de bombeo.</p></li>
+                    <li> <p>Manejo de residuales sólidos urbanos.</p></li>
+                </ul>    
+                <p>
+                    CRYOTEC SRL con especialistas de alto nivel de experiencia en el campo de la ingeniería sanitaria, interactúan con softwares de vanguardia, para el tratamiento de las aguas residuales, las soluciones recomendadas por CRYOTEC SRL siempre llevan intrínsecas propuestas que dan valor agregado al propio proceso de tratamiento como por ejemplo el reuso de las aguas tratadas y del lodo estabilizado, el aprovechamiento del biogás en procesos anaeróbicos.
+                </p>
+                <h3>Planta de Tratamiento de Aguas Residuales</h3>
+                <div class="contenedor2">
+                    <div class="textosnivel0">
+                        <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion.jpg" alt="" class="imagen">          -->
+                        <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/2-e1724863138193.png" alt="" class="imagen">         
+
+                    </div>
+                    <div class="textosnivel0">                     
+                        <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion2.jpg" alt="" class="imagen">          -->
+                        <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/19-e1724863274617.png" alt="" class="imagen">         
+
+                    </div>               
+                </div>
+                <br>
+                <h3>Sistema de tratamiento de Centros Porcinos</h3>
+                <div class="contenedor2">
+                    <div class="textosnivel4">
+                        
+                        <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion3.jpg" alt="" class="imagen">          -->
+                        <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/6-e1724863797564.png" alt="" style="max-width:301px !important; margin-top: 14px;">         
+
+                    </div>
+                    <div class="textosnivel4">                     
+                        <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion4.jpg" alt="" class="imagen">          -->
+                        <img src="http://cryotecsrl.com/wp-content/uploads/2024/08/18.png" alt="" class="imagen">         
+
+                    </div>               
+                </div>
+                <br>
+                <h3>Tratamiento de Aguas Oleosas</h3>
+                <div class="contenedor2">
+                    <div class="textosnivel5">
+                        <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion5-1.png" alt="" class="imagen">          -->
+                        <img src="http://cryotecsrl.com/wp-content/uploads/2024/08/7.png" alt="" class="imagen">         
+
+                    </div>
+
+                    <div class="textosnivel5">                     
+                        <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion6-1.png" alt="" class="imagen">        -->
+                        <img src="http://cryotecsrl.com/wp-content/uploads/2024/08/17.png" alt="" class="imagen">         
+  
+                    </div>               
+                </div>
+                <div class="contenedor2">
+                    <div class="textos2">
+                        <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion11.png" alt="" class="imagen">          -->
+                        <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion11.png" alt="" class="imagen">         
+
+                    </div>
+                    <div class="textos2">                     
+                        <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion8.jpg" alt="" class="imagen">          -->
+                        <img src="http://cryotecsrl.com/wp-content/uploads/2024/08/16.png" alt="" class="imagen">         
+
+                    </div>               
+                </div>
+                <div class="contenedor2">
+                    <div class="textosnivel0">
+                        <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion9.jpg" alt="" class="imagen">          -->
+                        <img src="http://cryotecsrl.com/wp-content/uploads/2024/08/8.png" alt="" class="imagen">         
+
+                    </div>
+                    <div class="textosnivel0">                     
+                        <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/bioremediacion10.png" alt="" class="imagen">          -->
+                        <img src="http://cryotecsrl.com/wp-content/uploads/2024/08/15.png" alt="" class="imagen">         
+
+                    </div>               
+                </div>
+                <br><br>
+                <a class="alink" href="https://wa.me/59178897130?text=">
+                    <button class="botonContacto ">Contacta
+                        <img class="miniIcono" src="https://cryotecsrl.com/wp-content/uploads/2024/08/whatsapp.png" alt="Imagen 1" class="imagen">
+                    </button>
+                </a>
+        </div>
+        <!-- <div class="section">
+            <div class="subsection">
+               
+            </div>
+            <div class="subsection">
+                
+            </div>  
+            
+        </div> -->
+        <!-- División Incineración -->
+        <div id="incineracion" class="section">
+            <h2>División Incineración</h2>
+            <p>
+                CRYOTEC SRL desarrollo en la pandemia un horno crematorio móvil, idea que tuvo una repercusión a nivel mundial, sopesada la época de la pandemia, se diseño el incinerador o cremador es de fácil instalación, mantenimiento o reposición de piezas.  
+                <br>
+                Su operación con gas natural o gas licuado de Petróleo lo hace amigable, su funcionamiento es continuo y seguro, con costo de operación eficiente.
+                <br>
+                El incinerador, por el nivel de temperatura de trabajo y la regulación de la inyección de aire, responde a la combustión con eficiencia, consiguiendo que la materia quede expuesta a la temperatura que inducen a su propia combustión, por la inyección de aire en el hogar, entonces opera con la combustión de la materia y la inyección de aire, en tanto el diferencial de temperatura no requiera la activación de la llama del quemador, proceso más eficiente y de menor consumo de combustible. El incinerador es una estructura fija, abierta y modular, provisto de dos cámaras, el hogar de combustión y la requema de gases que lo hacen ambientalmente amigable.
+                <ul>
+                    <li><p>La primera cámara es el hogar de combustión con fuego directo con una temperatura de operación de 800 a 900 grados centígrados.</p></li>
+                    <li><p>La segunda cámara de requema de gases de combustión, generados en el hogar de combustión, son expuestos a fuego envolvente de orden de los 1000 grados centígrados para la reducción de emisiones.</p></li>
+                </ul>
+            </p>
+            <p>
+                A la salida de la segunda cámara está dispuesto el lavador de gases que viabiliza la segunda reducción de emisiones.
+               
+            </p>
+            <div class="contenedor2">
+                <div class="textos2">
+                   <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/incineracion1.png" alt="" class="imagen">         
+
+                </div>  
+                <div class="textos2">
+                    <p>                El incinerador en ambas cámaras esta soportado por un recubrimiento interior de ladrillo refractario, chapa de acero, aislante y chapa de acero, donde el aislante incorporado, permite la reducción del calor emanado por el proceso de combustión. La construcción del incinerador es con ladrillos refractarios de contenido de alúmina para altas temperaturas. 
+
+                         Los quemadores para la cámara de combustión y requema, ambos de tiro forzado, con aporte de gas combustible controlado e inyección de aire controlado, con el flujo de aire regulable según las condiciones propias del lugar de funcionamiento, que permite optimizar la oxidación de la llama.</p>
+
+                </div>                          
+            </div>
+            <br><br>
+            <h3>Información técnica</h3>
+                    <ul>
+                        <li><p>Especificaciones del incinerador.</p></li>
+                        <li><p>Dimensiones:  Largo: 2963 mm, Ancho: 1768 mm, Altura: 4450 mm. (Las medidas de altura no incluyen la chimenea)</p></li>
+                        <li><p>Peso 3,10 toneladas</p></li>
+                        <li><p>Área de carga 1600 mm × 1000 mm</p></li>
+                        <li><p>Volumen de la cámara primaria 1.60M3</p></li>
+                        <li><p>Capacidad de carga máxima nominal 200 KG</p></li>
+                        <li><p>Volumen de la cámara primaria 1.60M3</p></li>
+                        <li><p>Fuentes de alimentación 50 Hz  220 voltios</p></li>
+                        <li><p>Panel de control ON - OFF</p></li>
+                        <li><p>Tipo de combustible Gas Natural o Gas licuado de petróleo</p></li>
+                    </ul>
+            <div class="contenedor2">
+                <div class="textos3">
+                      
+                </div>   
+                <div class="textos3">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/incineracion2.png" alt="" class="imagen2">         
+                </div>                          
+            </div>
+            <br><br>
+            <a class="alink" href="https://wa.me/59178897130?text=">
+                <button class="botonContacto ">Contacta
+                    <img class="miniIcono" src="https://cryotecsrl.com/wp-content/uploads/2024/08/whatsapp.png" alt="Imagen 1" class="imagen">
+                </button>
+            </a>
+        </div>
+        <!-- <div class="section">
+            <div class="subsection">
+                
+            </div>                   
+            <div class="cta">
+                <a href="https://scinutrition.cryotecsrl.com">Elija su menú para hoy!</a>
+            </div>
+        </div> -->
+        <!-- Division ingenieria -->
+        <div id="ingenieria" class="section">
+            <h2>División Ingeniería</h2>
+            <p><b> <i> “Es importante resolver la limitación de los recursos y 
+                conseguir su aplicación racional en múltiples fines”</i></b></p>
+            
+                <div class="contenedor2">
+                    <div class="textos2">
+                        <p>
+                            CRYOTEC SRL está conformado por un conjunto de profesionales interdisciplinarios con basta experiencia, que desarrollan sus actividades en su área de especialización, abordando cada situación con el mayor grado de compromiso, consiguiendo entregar resultados como producto de la interacción y la retroalimentación, que deviene en estudios abordados desde diversos puntos de vista y consiguiendo focalizar la mejor toma de decisión.
+
+                        </p>    
+                    </div>  
+                    <div class="textos2">
+                        <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/Sin-titulo-1-sd.png" alt="" class="imagen" >         
+                    </div>                          
+                </div>  
+                <br>
+            </p>
+                <p>Para cada uno de los campos de acción ofrecemos además el soporte de firmas internacionales que respaldan nuestro trabajo.
+            </p>
+            <div class="contenedor2">
+                <div class="textosnivel3">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/9.png" alt="" style="max-width:250px !important;">         
+                    <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/14.png" alt="" style="max-width:260px;">          -->
+
+                </div>     
+                <div class="textosnivel3">
+                    <!-- <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/9.png" alt="" style="max-width:210px;">          -->
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/14.png" alt="" style="max-width:300px !important;">         
+
+                </div>                         
+                <!-- <div class="textos">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/8370542c-a02b-49a5-8e53-0f1285dc4422-1.jpeg" alt="" class="imagen">         
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/7982b32e-3e20-4438-86f7-9b7c83e5aa63-1.jpeg" alt="" class="imagen">         
+
+                </div>                           -->
+            </div>  
+            <h3>Servicios</h3>
+            <ul>
+                <li><p>Estudios y proyectos del ámbito petrolero, ingeniería civil y medio ambiente</p></li>
+                <li><p>Ingeniería conceptual, básica y de detalle de energéticos</p></li>
+                <li><p>Análisis, diseño y control de procesos</p></li>
+                <li><p>Estudios y diagnósticos técnicos y económicos</p></li>
+                <li><p>Modelos y sistemas de optimización</p></li>
+                <li><p>Preparar y evaluar proyectos, análisis de sensibilidades y simulaciones</p> </li>
+                <li><p>Administrar proyectos, elaborar presupuestos y análisis de costos </p></li>
+                <li><p>Estudio de organización y métodos </p></li>
+                <li><p>Balance de línea de producción </p></li>
+                <li><p>Oferta de maquinaria y equipos para la industria </p></li>
+                <li><p>Sistematización de procesos, instrumentación y control  </p></li>
+                <li><p>Planificación estratégica de procesos  </p></li>
+                <li><p>Diseño de sistemas conceptuales y de detalle a parámetros de operación  </p></li>
+                <li><p>Gestión  de alternativas de financiamiento de proyectos </p></li>
+                <li><p>Establecimiento de garantías financieras y de operación </p></li>
+                <li><p>Estudio y construcción de obras civiles </p></li>
+                <li><p>Suministro, montaje y puesta en marcha </p></li>
+                <li><p>Operación de procesos con personal especializado</p></li>
+                <li><p>Mantenimiento preventivo, predictivo y correctivo</p></li>                    
+            </ul>
+            <!-- <p style="text-align:center ;"><b> <i>Contáctenos y lo visitamos a la brevedad!!!</i></b></p> -->
+            <br><br>
+            <a class="alink" href="https://wa.me/59178897130?text=">
+                <button class="botonContacto ">Contacta
+                    <img class="miniIcono" src="https://cryotecsrl.com/wp-content/uploads/2024/08/whatsapp.png" alt="Imagen 1" class="imagen">
+                </button>
+            </a>
+        </div>
+        <!-- <div class="section">
+            <div class="subsection">
+                
+            </div>                   
+            <div class="cta">
+                <a href="https://scinutrition.cryotecsrl.com">Elija su menú para hoy!</a>
+            </div>
+        </div> -->
+        <!-- Division energia -->
+        <div id="energia" class="section">
+            <h2>División Energía</h2>
+            <p><b> <i>“La energía es una propiedad asociada a los objetos y sustancias,
+                se manifiesta en las transformaciones que ocurren en la naturaleza”</i></b></p>
+            <p>
+                CRYOTEC SRL - Energía es la parte especializada en temas de energía, particularmente electricidad; tenemos un interés especial en realizar proyectos de energía en distintos ámbitos. 
+                <br>
+                Brindamos tecnología para proyectos de reducción de costos, calidad de la energía (factor de potencia, corrientes armónicas, etc.) e instalaciones eléctricas, especialmente cuando se requiere una alta calidad y confiabilidad en el suministro. 
+                <br>
+                Actualmente trabajamos en el concepto de energía con integración de servicios, antes prácticamente inexistente en Bolivia, que va desde el análisis de sus consumos hasta instrumentación compleja. 
+                <br>
+            </p>
+            <h3>Electromovilidad:</h3>
+            <!--<div class="contenedor2">
+                <div class="textos">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/07/electromibilidad.jpg" alt="" class="imagen">         
+                </div>                          
+            </div>-->
+            
+            <div class="contenedor2">
+                <div class="textos2">
+                    <p>
+                        <!-- La experiencia como empresa supervisora del diseño, construcción y puesta en marcha del teleférico más grande del mundo, Teleférico de La Paz y El Alto, sumada a la experiencia en nuestra División energía, abre la posibilidad de encarar y proponer nuevos proyectos del contexto de movilidad urbana.    -->
+                        El 2012 CRYOTEC SRL encara la <b> Supervisión del diseño, construcción, puesta en marcha y seguimiento en la operación </b> del sistema de TELEFERICO entre las ciudades de La Paz y El Alto - Bolivia, sistema de teleféricos más grande del mundo.
+                    </p>                </div> 
+                <div class="textos2">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/13.png" alt="" class="imagen">         
+                </div>                          
+            </div>
+            <h3>Servicios:</h3>
+            <ul>
+                <li><p>Optimización de sistemas de iluminación y demanda energía acondicionamiento ambiental, refrigeración, aprovechamiento de fuentes alternas</p></li>
+                        <li><p>Diseño y rehabilitación de instalaciones, procesos y construcciones</p></li>
+                        <li><p>Supervisión y ejecución de instalaciones</p></li>
+                        <li><p>Puesta en operación, mantenimiento y servicio de equipos e instalaciones</p></li>
+                        <li><p>Programas de racionalización energética y de protección ambiental</p></li>
+                <div class="contenedor2">
+                    <div class="textos2">
+                        
+                        <li><p>Medición, registro, verificación y control</p></li>
+                        <li><p>Autoabastecimiento de electricidad o fuerza motriz</p></li>
+                        <li><p>Control e incremento de eficiencia energética</p></li>
+                        <li><p>Procesos térmicos</p></li>                    </div>      
+                    <div class="textos2">
+                        <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/Sin-titulo-1-Recupgggerado-1.png" alt="" class="imagenHorizontal">         
+                    </div>                          
+                </div>
+                <li><p>Asesoría especializada en procesos energéticos </p></li>
+                <ul>
+                    <li><p>Estudios Tarifarios: de distribución y transporte. Electricidad y comercialización </p></li>
+                    <li><p>Evaluación de Negocios: economía de la energía, estudios de mercado y evaluación económico-financiera de proyectos energéticos</p></li>
+                    <li><p>Regulación y Simulación de Mercados Eléctricos y Gas Natural: a través de modelos propios de simulación y optimización</p></li>
+                    <li><p>Estudios y Proyectos Eléctricos, Gas Natural y Petróleo: análisis técnicos, diseño, definición de maquinaria y equipamiento, estructuración de sistemas de transporte y distribución</p></li>
+                    <li><p>Estudios de funcionamiento y de calidad de servicio</p></li>
+                    <li><p>Impacto Ambiental: evaluaciones de impacto ambiental de instalaciones eléctricas, gas natural y proceso de petróleo</p></li>
+                </ul>
+            </ul>
+            <!-- <p style="text-align:center ;"><b> <i>Contáctenos y lo visitamos a la brevedad!!!</i></b></p> -->
+            <br><br>
+            <a class="alink" href="https://wa.me/59178897130?text=">
+                <button class="botonContacto ">Contacta
+                    <img class="miniIcono" src="https://cryotecsrl.com/wp-content/uploads/2024/08/whatsapp.png" alt="Imagen 1" class="imagen">
+                </button>
+            </a>
+        </div>
+        <!-- medio ambiente -->
+        <div id="ambiente" class="section">
+            <h2>División Medio Ambiente - Seguridad Industrial - Higiene y Salud Ocupacional</h2>
+            <p style="text-align:center;"><b> <i>“El mundo pertenece a las generaciones futuras,
+                es nuestra obligación protegerlo”</i></b></p>
+            <h3>Medio Ambiente:</h3>
+            <p>
+                Ante la necesidad del ser humano de preservar su mayor fuente de recursos y saber aprovecharlos en conformidad con las normativas nacionales e internacionales vigentes, Cryotec Srl. ofrece un enfoque de sistemas integrado de las normas ISO 9001:2000, ISO 14001:2004, OHSAS 18001:1999 y SA 8000:2001, con énfasis en el desarrollo sostenible y su aplicabilidad al entorno de nuestras labores, considerando los conceptos socioeconómicos, culturales, industriales y ambientales.
+                <br>
+                <br>
+            </p>
+            <div class="contenedor2">
+                <div class="textos2">
+                <p>    El objetivo de nuestro trabajo, es el velar por la mejor disposición de los recursos en concordancia con la biodiversidad, mejorar la calidad de vida de la población, además de preservar esta para futuras generaciones, consiguiendo  el crecimiento económico sostenible y la consecución  de los mejores resultados.
+                </p>
+                </div>  
+                <div class="textos2">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/sdao-1.png" alt="" class="imagenHorizontal">         
+                </div>                          
+            </div>
+            <h3>Servicios:</h3>
+
+            <div class="contenedor2">
+                <div class="textos2">
+                    <ul>
+                        <li><p>Asistencia técnica especializada</p></li>
+                        <li><p>Desarrollo de modelos de mejoramiento continuo</p></li>
+                        <li><p>Protección del entorno natural</p></li>
+                        <li><p>Diagnóstico Estadístico del Sistema (DES)</p></li>
+                        <li><p>Desarrollo de Sistemas Integrados Gestión (DSIG)</p></li>
+                        <li><p>Optimización de sus recursos</p></li>
+                        <li><p>Sistema de Gestión de Prevención (SGP)</p></li>
+                        <li><p>Actualización jurídico-normativa permanente</p></li>
+                        <li><p>Evaluación de Gestión Eficaz (EGE)</p></li>
+                        <li><p>Estudios específicos para cada ámbito</p></li>
+                        <li><p>Planificación de las actividades, ambiental (EIA, EAE) y seguridad industrial</p></li>
+                        <li><p>Ingeniería integral de proyectos</p></li>
+                        <li><p>Detección de difusión</p></li>
+                        <li><p>Estudios de caracterización, tratamiento y recuperación</p></li>
+                        <li><p>Gestión y operación de redes de control</p></li>
+                        <li><p>Evaluaciones y auditorías de diagnóstico y seguimiento</p></li>
+                        <li><p>Análisis del ciclo de vida</p></li>
+                        <li><p>Análisis de riesgos</p></li>
+                        <li><p>Gestión de residuos (Cuantificación e inventarios)</p></li>
+                        <li><p>Planes de gestión y minimización, Planes de prevención y comunicación, Control de calidad de residuos, Proyectos de construcción, explotación, sellado y clausura de vertederos y otros.</p></li>
+                        <li><p>Inspección y control medioambiental (atmosférica, fuentes de agua, suelos y campos electromagnéticos)</p></li>
+                             
+                    </ul>   
+                </div>   
+                <div class="textos2">
+                    <ul>
+                        
+        
+                    </ul>            
+                </div>                          
+            </div>
+       
+            
+            <div class="contenedor2">
+                <div class="textos2">
+                    <p>
+                        La experiencia como empresa supervisora del diseño, construcción y puesta en marcha del teleférico más grande del mundo, Teleférico de La Paz y El Alto, sumada a la experiencia en nuestra División energía, abre la posibilidad de encarar y proponer nuevos proyectos del contexto de movilidad urbana.   
+                    </p>                </div>    
+                <div class="textos2">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/12.png" alt="" class="imagen">         
+                </div>                          
+            </div>
+            <h3>Seguridad industrial, Salud e Higiene – Ocupacional:</h3>
+            <p>Paralelamente, las empresas desarrollan procesos que deben ser desempeñados y administrados efectivamente, con calidad, productividad y de forma competitiva. Sin embargo el logro de sus objetivos suele ser frenado, por fallas, omisiones y / o debilidades, en el desempeño de las personas y de la gestión de todos los procesos, estas causales de ineficiencia se traducen en:</p>
+            <ul>
+                <li><p>Defectos, los cuales devienen en menor calidad e insatisfacción del cliente.</p></li>
+                <li><p>Derroches, afectando los niveles de productividad, con interrupciones, paradas y demoras en procesos productivos.</p></li>
+                <li><p>Daños a las personas y a la propiedad, tales como enfermedades profesionales, lesiones físicas y síquicas; además de los daños a maquinaria, equipos e instalaciones, los cuales inciden de forma directa en los costos.</p></li>            </ul>
+            <div class="contenedor2">
+                <div class="textos2">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/10-e1724678956360.png" alt="" style="max-width:300px !important;"">         
+
+                </div>  
+                <div class="textos2">
+                    <p>Entonces, los accidentes no solo son enemigos de los trabajadores afectando su calidad de vida, más bien éstos son verdaderos enemigos de las organizaciones y constituyen un derroche de recursos que va más allá de los efectos inmediatos que ocasionan. En definitiva, estos factores se traducen en pérdidas que afectan la rentabilidad de las organizaciones, en magnitudes insospechadas, además de marginar el desafió mas trascendente y estratégico de hoy en día, la “Competitividad”.</p>
+
+                </div>                          
+            </div>
+            <h3>Servicios:</h3>
+            <div class="contenedor2">
+                <div class="textos2">
+                    <ul>
+                        <li><p>Evaluación de ambientes de trabajo</p></li>
+                        <li><p>Diagnóstico inicial y periódico de monitoreo de la seguridad industrial e higiene ocupacional</p></li>
+                        <li><p>Desarrollo de soluciones bajo normas y estándares</p></li>
+                        <li><p>Monitoreo en la aplicación de medidas correctivas y preventivas</p></li>
+                        <li><p>Análisis estadístico y económico de la seguridad industrial e higiene ocupacional</p></li>
+                        <li><p>Asesoramiento y definición en la compra de equipo de protección y sistemas de seguridad</p></li>
+                        <li><p>Estudio de salud e higiene ocupacional</p></li>                        
+                    </ul>   
+                </div>   
+                <div class="textos2">
+                    <ul>
+                        <li><p>Cálculo y estudio de variables de seguridad industrial</p></li>
+                        <li><p>Capacitación, adiestramiento y simulaciones</p></li>
+                        <li><p>Estudios de tiempos y movimientos</p></li>
+                        <li><p>Asesoramiento y estudios de saneamiento básico</p></li>
+                        <li><p>Asesoramiento y estudio de la responsabilidad social</p></li>
+                        <li><p>Servicios de consulta en línea</p></li>
+                    </ul>            
+                </div>                          
+            </div>
+ 
+            <!-- <p style="text-align:center;"><b> <i>Contáctenos y lo visitamos a la brevedad!!!</i></b></p> -->
+            <br><br>
+            <a class="alink" href="https://wa.me/59178897130?text=">
+                <button class="botonContacto ">Contacta
+                    <img class="miniIcono" src="https://cryotecsrl.com/wp-content/uploads/2024/08/whatsapp.png" alt="Imagen 1" class="imagen">
+                </button>
+            </a>
+        </div>
+        <!-- economia -->
+        <div id="economia" class="section">
+            <h2>División Economía</h2>
+            <p style="text-align:center;"><b> <i>“El mundo pertenece a los insatisfechos que buscan una constante superación”</i></b></p>
+           
+            <div class="contenedor2">
+                <div class="textos2">
+                    <p>
+                        Si esto se aplica directamente a las empresas que se desenvuelven en un medio de constantes cambios, se descubre que es el momento de dejar atrás aquellos enfoques tradicionales.
+
+                    </p>
+                </div>   
+                <div class="textos2">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/Sin-titulo-1-Recuperado.png" alt="" class="imagenHorizontal">         
+                </div>                          
+            </div>  
+            <p>
+                El enfoque de economía integral ofertado, se encuentra estructurado desde distintas ópticas de forma tal que permite examinar el comportamiento de la empresa en cada una de sus facetas ya sea específica o integralmente, lo cual permite vislumbrar el comportamiento con la mayor certidumbre posible, determinando las variables críticas y de mayor sensibilidad a fin de hacer frente a distintas situaciones de riesgo.            <br>
+
+            </p>
+            <h3>Servicios:</h3>
+
+            <div class="contenedor2">
+                <div class="textos2">
+                    <ul>
+                        <li><p>Análisis Económico</p></li>
+                        <li><p>Análisis de costo de capital</p></li>
+                        <li><p>Análisis Tecnológico y financiero</p></li>
+                        <li><p>Análisis de impactos</p></li>
+                        <li><p>Preparación y evaluación de proyectos</p></li>
+                        <li><p>Simulaciones y sinergias para la inversión</p></li>
+                        <li><p>Análisis de riesgo</p></li>
+                        <li><p>Estructuración del financiamiento de proyectos</p></li>
+                        
+                    </ul>   
+                </div>   
+                <div class="textos2">
+                    <ul>
+                        <li><p>Organización de diferentes etapas en la evaluación de inversiones</p></li>
+                        <li><p>Auditorías</p></li>
+                        <li><p>Aumentar el EVA (Economic Value Added)</p></li>
+                        <li><p>Reducir los costos operativos directos e indirectos</p></li>
+                        <li><p>Aumentar la productividad de la empresa</p></li>
+                        <li><p>Cumplir con estándares específicamente exigidos por su rubro</p></li>
+                        <li><p>Actualización tecnológica del sistema</p></li>
+                    </ul>            
+                </div>                          
+            </div>
+            
+            <br><br>
+            <a class="alink" href="https://wa.me/59178897130?text=">
+                <button class="botonContacto ">Contacta
+                    <img class="miniIcono" src="https://cryotecsrl.com/wp-content/uploads/2024/08/whatsapp.png" alt="Imagen" class="imagen">
+                </button>
+            </a>    
+        </div>
+        <!-- arquitectura -->
+        <div id="arquitectura" class="section">
+            <h2>División Arquitectura</h2>
+            <p style="text-align:center;"><b> <i>“La belleza depende de los ojos con los que se mira”</i></b></p>
+            <p>
+                Ofrece el desarrollo completo de proyectos arquitectónicos con planificación participativa entre el cliente y un equipo profesional interdisciplinario.  Las necesidades se satisfacen con la generación de alternativas de acuerdo a requerimientos específicos, características propias y definición de recursos, para la mejor elección.
+                <br>
+                Se brinda asesoría en la ejecución de trabajos necesarios en reparación, decoración y remodelación, logrando espacios económicos, seguros, gratos, confortables y atractivos.
+            </p>  
+            <div class="contenedor2">
+                <div class="textos2">
+                    <h3>Servicios:</h3>
+                    <ul>
+                        <li><p>Elaboración de proyectos arquitectónicos, "técnico, ágil y de diseño claro"</p></li>
+                        <li><p>Remodelación y decoración de interiores</p></li>
+                        <li><p>Ambientes para niños <strong>Nuevo !!!</strong></p></li>
+                        <li><p>Jardinería y paisajismo</p></li>
+                        <li><p>Generación de bancos de datos de proyectos, bloques y planos</p></li>
+                        <li><p>Base de datos que contiene el emplazamiento, tamaño y atributos específicos</p></li>
+                        <li><p>Automatización de procesos de dibujo e impresión Servicio de dibujo e impresión ágil y preciso</p></li>
+                        <li><p>Proyectos diseñados en lenguaje computarizado AUTOCAD</p></li>
+                        <li><p>Modelos tridimensionales y simuladores</p></li>
+                    </ul> 
+                </div>  
+                <div class="textos2">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/11-2.png" alt="" class="imagen">         
+                </div>                          
+            </div>  
+           
+            <!-- <p style="text-align:center ;"><b> <i>Contáctenos y lo visitamos a la brevedad!!!</i></b></p> -->
+
+            <br><br>
+            <a class="alink" href="https://wa.me/59178897130?text=">
+                <button class="botonContacto ">Contacta
+                    <img class="miniIcono" src="https://cryotecsrl.com/wp-content/uploads/2024/08/whatsapp.png" alt="Imagen 1" class="imagen">
+                </button>
+            </a>
+    
+        </div>
+        <!-- sistemas -->
+        <div id="sistemas" class="section">
+            <h2>División Sistemas</h2>
+            <p style="text-align:center;"><b> <i>“La tecnología no se detiene. <br> 
+                Aprovechemos su mejor uso”</i></b></p>
+            
+
+            <div class="contenedor2">
+                <div class="textos2">
+                    <img src="https://cryotecsrl.com/wp-content/uploads/2024/08/Sin-titulo-1-Recuperadso-1.png" alt="" class="imagenHorizontal">    
+                </div>    
+                <div class="textos2">
+                    <p>
+                        CRYOTEC  SRL brinda todos sus conocimientos a sus clientes en basa a la experiencia adquirida en proyectos con nuevas tecnologías.       
+                    </p>       
+                </div>                         
+            </div> 
+            <h3>Servicios:</h3>         
+            <div class="contenedor2">
+                <div class="textos2">
+                    <ul>
+                        <li><p>Provisión de UPS <b> Nuevo !!!</b></p></li>
+                        <li><p>Administradores de Bases de datos</p></li>
+                        <li><p>Ingenieros certificados por Microsoft (MCSE)</p></li>
+                        <li><p>Especialistas en productos Novell</p></li>
+                        <li><p>Especialistas en productos Red Hat Linux</p></li>
+                        <li><p>Especialistas en productos Microsoft (Product Specialist)</p></li>
+                        <li><p>Especialistas en instalaciones de productos de antivirus y seguridad</p></li>
+                        <li><p>Especialistas en instalaciones de productos de respaldo</p></li>                        
+                    </ul>   
+                </div>   
+                <div class="textos2">
+                    <ul>
+                        <li><p>Especialistas en instalación y soporte de equipos de alta disponibilidad</p></li>
+                        <li><p>Portafolio de negocios</p></li>
+                        <li><p>Aprovisionamiento de Hardware y Software de última generación</p></li>
+                        <li><p>Proyectos y consultorías</p></li>
+                        <li><p>Diseño y configuración de redes y telefonía</p></li>
+                        <li><p>Servicio Técnico Autorizado en diferentes marcas</p></li>
+                        <li><p>Outsourcing (Externalización de Servicios)</p></li>
+                    </ul>            
+                </div>                          
+            </div>
+             
+            <!-- <p style="text-align:center ;"><b> <i>Contáctenos y lo visitamos a la brevedad!!!</i></b></p> -->
+            <br><br>
+            <a class="alink" href="https://wa.me/59178897130?text=">
+                <button class="botonContacto ">Contacta
+                    <img class="miniIcono" src="https://cryotecsrl.com/wp-content/uploads/2024/08/whatsapp.png" alt="Imagen 1" class="imagen">
+                </button>
+            </a>
+        </div>
+    </div>
+
+
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <footer class="footer">
+        <!-- <p>&copy; 2024 CRYOTEC SRL. Todos los derechos reservados.</p> -->
+    </footer>
+    <script>
+        // Mostrar/ocultar la flecha según el desplazamiento de la página
+        window.onscroll = function() {
+            var backToTop = document.getElementById('backToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        };
+
+        // Función para desplazarse hacia arriba
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <!-- <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script> -->
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYOTEC SRL</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        header {
+            background: linear-gradient(135deg, #004080, #0073e6);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #004080;
+            border-bottom: 2px solid #004080;
+            padding-bottom: 10px;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .section p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .accordion {
+            background-color: #f9f9f9;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            transition: background-color 0.4s ease;
+            margin-bottom: 10px;
+        }
+        .accordion:hover, .accordion.active {
+            background-color: #ddd;
+        }
+        .panel {
+            padding: 0 20px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        .footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CRYOTEC SRL</h1>
+        <p>Comprometidos con la excelencia</p>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Sobre Nosotros</h2>
+            <p>CRYOTEC SRL es una empresa comprometida con la excelencia. Nuestra empresa fue creada en el año 2003, fruto de un análisis de nuestro campo de acción como profesionales, la coyuntura nacional e internacional, los retos, las problemáticas; nos compromete en asignar nuestras competencias profesionales en diferentes áreas de los servicios para atender sus necesidades.</p>
+            <p>Somos una empresa con visión moderna de los negocios, nos encontramos en la búsqueda permanente de socios estratégicos que nos permitan tender nuevos puentes de alianza estratégicos, visión de negocios internacionales, que agilizan las soluciones a cada uno de los problemas de nuestros clientes.</p>
+            <button class="accordion">Detalles Adicionales</button>
+            <div class="panel">
+                <p>CRYOTEC SRL se ganó la confianza de nuestros clientes, habiendo concluido satisfactoriamente todos y cada uno de los contratos, de igual forma la satisfacción en nuestras relaciones comerciales.</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Nuestras Áreas</h2>
+            <p>CRYOTEC SRL desde sus inicios, aborda las áreas de ingeniería, energía – petróleo, arquitectura, economía, medio ambiente, seguridad industrial, higiene y salud ocupacional con responsabilidad social y sistemas.</p>
+        </div>
+        <div class="section">
+            <h2>Colaboraciones y Proyectos</h2>
+            <p>A principios del año 2006, CRYOTEC SRL firmó un compromiso con la Compañía Linde AG de Alemania para el desarrollo de proyectos en Bolivia y en el exterior, relacionados con el Gas Natural y el Petróleo.</p>
+            <button class="accordion">Proyectos desde 2020</button>
+            <div class="panel">
+                <ul>
+                    <li>Alimentación: creación del primer Centro de Control Metabólico SCINUTRITION, especializado en nutrición FITNESS – DIETAS – NORMAL, con productos cocinados y envasados con tecnología ATM (Atmosfera Modificada).</li>
+                    <li>Bio remediación: uso de organismos vivos (microorganismos, hongos y plantas) para restaurar ambientes alterados por contaminantes a su condición natural.</li>
+                    <li>Producción de incineradores y hornos crematorios: incineradores con temperatura de trabajo de 800 a 1,000 grados centígrados y regulación de la inyección de aire, eficientes y ambientalmente amigables.</li>
+                    <li>Electromovilidad: experiencia en el diseño, construcción y puesta en marcha del teleférico más grande del mundo, Teleférico de La Paz y El Alto, abriendo posibilidades para nuevos proyectos de movilidad urbana.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <button class="accordion">Más Información Técnica</button>
+            <div class="panel">
+                <p>El incinerador, con un nivel de temperatura de trabajo de 800 a 1,000 grados centígrados y la regulación de la inyección de aire, responde a la combustión con eficiencia. La materia queda expuesta a la temperatura que induce a su propia combustión (autoinducción). Con la inyección de aire en el hogar, se consigue que opere con la combustión de la materia, sin requerir la activación de la llama del quemador, haciendo el proceso más eficiente y de menor consumo de combustible. El incinerador es una estructura fija, abierta y modular, provisto de dos cámaras, el hogar de combustión y la requema de gases, lo que lo hace ambientalmente amigable.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 CRYOTEC SRL. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html> -->
